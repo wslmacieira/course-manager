@@ -10,6 +10,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { RouterModule } from '@angular/router';
 import { Error404Component } from './404/Error404.component';
 import { CourseInfoComponent } from './courses/course-info.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -18,9 +19,11 @@ import { CourseInfoComponent } from './courses/course-info.component';
     StarComponent,
     ReplacePipe,
     NavBarComponent,
-    Error404Component
+    Error404Component,
+    CourseInfoComponent
    ],
   imports: [
+    CommonModule,
     BrowserModule,
     FormsModule,
     RouterModule.forRoot([

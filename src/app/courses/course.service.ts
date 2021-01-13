@@ -9,6 +9,17 @@ export class CourseService {
   getAll(): Course[] {
     return COURSES;
   }
+
+  getById(id: number): Course {
+    return COURSES.find(course => course.id === id);
+  }
+
+  save(course: Course): void {
+    if (course.id) {
+      const index = COURSES.findIndex((courseIndex: Course) => courseIndex.id === course.id);
+      COURSES[index] = course;
+    }
+  }
 }
 
 const COURSES: Course[] = [
